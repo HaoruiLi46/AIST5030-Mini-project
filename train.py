@@ -145,10 +145,18 @@ def parse_args():
                         help="Maximum sequence length for tokenization")
 
     # OFT config
-    parser.add_argument("--oft_block_size", type=int, default=2,
-                        help="Block size for OFT. Smaller = more parameters but more expressive")
-    parser.add_argument("--oft_r", type=int, default=8,
-                        help="Rank r for BOFT. Number of butterfly factors")
+    parser.add_argument(
+        "--oft_block_size",
+        type=int,
+        default=32,
+        help="Block size for OFT. Set > 0. Do not set together with --oft_r.",
+    )
+    parser.add_argument(
+        "--oft_r",
+        type=int,
+        default=0,
+        help="Rank r for OFT. Set > 0 only if --oft_block_size is 0.",
+    )
     parser.add_argument("--target_modules", type=str, default="all-linear",
                         help="Which modules to apply OFT to")
 
@@ -172,6 +180,15 @@ def parse_args():
 
 def main():
     args = parse_args()
+    if args.oft_r > 0 and args.oft_block_size > 0:
+        raise ValueError(
+            "Only one of --oft_r or --oft_block_size can be > 0. "
+            "Set the other one to 0."
+        )
+    if args.oft_r <= 0 and args.oft_block_size <= 0:
+        raise ValueError(
+            "You must set one of --oft_r or --oft_block_size to a positive value."
+        )
 
     # ---- Load tokenizer and model ----
     logger.info(f"Loading model: {args.model_name}")
@@ -199,14 +216,18 @@ def main():
 
     # ---- Apply OFT via PEFT ----
     logger.info("Applying OFT configuration...")
-    oft_config = OFTConfig(
-        r=args.oft_r,
-        oft_block_size=args.oft_block_size,
-        target_modules=args.target_modules,
-        bias="none",
-        task_type=TaskType.CAUSAL_LM,
-        module_dropout=0.0,
-    )
+    oft_kwargs = {
+        "target_modules": args.target_modules,
+        "bias": "none",
+        "task_type": TaskType.CAUSAL_LM,
+        "module_dropout": 0.0,
+    }
+    if args.oft_r > 0:
+        oft_kwargs["r"] = args.oft_r
+    else:
+        oft_kwargs["oft_block_size"] = args.oft_block_size
+
+    oft_config = OFTConfig(**oft_kwargs)
     model = get_peft_model(model, oft_config)
     model.print_trainable_parameters()
 
