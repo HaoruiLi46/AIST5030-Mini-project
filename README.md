@@ -26,7 +26,7 @@ conda activate qwen35-oft
 python -m pip install -U pip setuptools wheel
 
 # Install GPU PyTorch wheel for CUDA 12.1
-pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.6.0
+pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.5.1
 
 # Install project dependencies
 pip install -r requirements.txt
