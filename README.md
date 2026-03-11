@@ -32,7 +32,6 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.5.1
 pip install -r requirements.txt
 ```
 
-`requirements.txt` uses `transformers` from GitHub `main` branch to ensure compatibility with Qwen3.5.
 
 Verify GPU runtime on a compute node:
 
