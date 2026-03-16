@@ -1,0 +1,116 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "num_samples": 1000,
+  "validity": {
+    "valid_count": 0,
+    "total": 1000,
+    "validity": 0.0
+  },
+  "similarity": {
+    "avg_tanimoto_similarity": 0.0,
+    "evaluated_pairs": 0,
+    "total_pairs": 1000
+  },
+  "examples": [
+    {
+      "text": "This molecule is a member of coumarins and a glycoside.",
+      "ground_truth": "CO[C@@H]1[C@@H](OC(=O)N)[C@@H](O)[C@@H](OC1(C)C)Oc1ccc2c(c1C)oc(=O)c(c2O)NC(=O)c1ccc(c(c1)CC(C(=C)C)O)O",
+      "prediction": "To generate the SMILES string for a member of the **coumarin** class (specifically a coumarin glycoside), we must first identify the specific structure implied by the description.\n\nCoumarins are a class of natural products containing a benzene ring fused to a lactone ring (a 5-membered ring containing a carbonyl group). The most common and recognizable member of this class is **Coumarin** itself (2H-chrom"
+    },
+    {
+      "text": "This molecule is a beta-D-glucoside with 2-(3,4-dihydroxyphenyl)ethoxy residue at the anomeric position and a [(4-hydroxyphenyl)acetyl]oxy residue at position 2. Isolated from Ternstroemia japonica, i",
+      "ground_truth": "OC[C@H]1O[C@@H](OCCc2ccc(c(c2)O)O)[C@@H]([C@H]([C@@H]1O)O)OC(=O)Cc1ccc(cc1)O",
+      "prediction": "To generate the SMILES string for this molecule, let's break down its chemical structure based on the provided description:\n\n1.  **Core Structure**: It is a **beta-D-glucoside**. This means the anomeric carbon (C1) of the glucose ring is bonded to the oxygen of the aglycone.\n2.  **Residue at Position 2**: The description specifies a **[(4-hydroxyphenyl)acetyl]oxy"
+    },
+    {
+      "text": "This molecule is a pyrrolopyrimidine that is pyrrolo[2,3-d]pyrimidine substituted at position 4 by an N-methyl,N-(1-cyanoacetyl-4-methylpiperidin-3-yl)amino moiety. Used as its citrate salt to treat m",
+      "ground_truth": "N#CCC(=O)N1CC[C@H]([C@H](C1)N(c1ncnc2c1cc[nH]2)C)C",
+      "prediction": "To generate the SMILES string for this molecule, we must first determine its chemical structure based on the provided description and then convert it into a canonical SMILES representation.\n\n**1. Structure Analysis:**\n*   **Core Scaffold:** The description identifies it as a **pyrrolopyrimidine**. This is a fused bicyclic system consisting of a pyrrole ring (5-membered, containing a nitrogen) fused to a pyrimidine ring (6-membered"
+    },
+    {
+      "text": "This molecule has been used in trials studying the treatment of Osteoarthritis.",
+      "ground_truth": "COc1ccc2c(c1)ccc(c2)[C@@H](C(=O)OCCS(=O)(=O)C)C",
+      "prediction": "Based on the description provided, the molecule is **Methylprednisolone acetate** (also known as Prednisolone acetate).\n\nThis drug is a corticosteroid commonly used in clinical trials for the treatment of osteoarthritis and other inflammatory conditions. Its chemical structure is characterized by a methyl group attached to the 11-position of the steroid nucleus, which is the specific feature that distinguishes it from other corticosteroids like prednisol"
+    },
+    {
+      "text": "This molecule is a Standardized Chemical Allergen. The physiologic effect of dipentamethylenethiuram disulfide is by means of Increased Histamine Release, and Cell-mediated Immunity.",
+      "ground_truth": "S=C(N1CCCCC1)SSC(=S)N1CCCCC1",
+      "prediction": "To generate the SMILES string for **Dipentamethylenethiuram disulfide** (also known as **Dipentamethylenethiuram** or **DMP**), we must first identify its chemical structure and then convert it into a valid SMILES representation.\n\n**1. Structure Identification:**\n*   **IUPAC Name:** Dipentamethylenethiuram disulfide.\n*"
+    },
+    {
+      "text": "This molecule appears as a colorless to straw-colored liquid with a sharp penetrating odor. Denser than water and soluble in water. Severly irritates skin and eyes. Toxic by ingestion and inhalation. ",
+      "ground_truth": "COC(=O)CBr",
+      "prediction": "Based on the description provided, the molecule is **Acetaminophen** (also known as Paracetamol).\n\nThe description matches the following properties:\n*   **Appearance**: Colorless to straw-colored liquid.\n*   **Odor**: Sharp penetrating odor.\n*   **Solubility**: Denser than water and soluble in water.\n*   **Toxicity**: Severely irritates skin and eyes; toxic by ingestion and inhalation."
+    },
+    {
+      "text": "This molecule has been reported in Ruppia maritima with data available.",
+      "ground_truth": "OC[C@]1(C)CCC[C@@]2([C@@H]1CCC(=C)[C@H]2CCc1cocc1)C",
+      "prediction": "Based on the chemical name \"Ruppia maritima\" (the sea lettuce), the reported structure is a **monosaccharide** (specifically a pentose sugar) with a **pyranose ring**.\n\nThe specific sugar is **ribose**. The structure consists of a six-membered ring containing one oxygen atom, with a hydroxyl group (-OH) attached to the C1 position (anomeric carbon), a hydroxyl group at C"
+    },
+    {
+      "text": "This molecule is an azamacrocycle and a lactam.",
+      "ground_truth": "CO[C@H]1CN(C)C(=O)c2ccc(cc2OC[C@@H](NC[C@H]1C)C)NS(=O)(=O)c1ccc(cc1)F",
+      "prediction": "To generate the SMILES string for an azamacrocycle and a lactam, I need to construct a five-membered ring containing two nitrogen atoms (one primary, one secondary) and a carbonyl group (lactam).\n\nA common and representative structure for this class of compounds is **pyrrolizidine** (specifically the 2,5-diazepine derivative, but often referred to simply as an azamacrocycle/lactam in"
+    },
+    {
+      "text": "This molecule has been reported in Sarcocapnos crassifolia and Sarcocapnos enneaphylla with data available.",
+      "ground_truth": "CNCCc1ccc(c2c1C=Cc1c(O2)c(OC)c(cc1)OC)OC",
+      "prediction": "Based on the chemical name provided, this molecule is **Sarcocapnos** (a genus of *Sarcocapnos* species, likely *Sarcocapnos crassifolia* or *Sarcocapnos enneaphylla*).\n\nThe name \"Sarcocapnos\" is derived from the Greek *sarco* (to be) and *capnos* (to hide), referring to the plant's ability to hide its reproductive"
+    },
+    {
+      "text": "This molecule is an L-methionine derivative in which the sulfur has been oxidised to the corresponding sulfone. It has a role as an animal metabolite. It is a L-methionine derivative, a non-proteinoge",
+      "ground_truth": "OC(=O)[C@H](CCS(=O)(=O)C)N",
+      "prediction": "Based on the description provided, the molecule is **L-methionine sulfone** (specifically, the sulfone tautomer of the methionine sulfone zwitterion).\n\nThe structure consists of a methionine backbone (a leucine-like amino acid with an extra methyl group and a sulfone group) where the sulfur atom is oxidized from a thiol ($-SH$) to a sulfone ($-SO_2-$)."
+    },
+    {
+      "text": "This molecule has been reported in Viburnum ayavacense with data available.",
+      "ground_truth": "OC[C@H]1O[C@@H](OCC2=CO[C@H]([C@H]3[C@@H]2C[C@@H]([C@]3(O)COC(=O)C)OC(=O)C)OC(=O)CC(C)C)[C@@H]([C@H]([C@@H]1O)OC(=O)C)OC(=O)C",
+      "prediction": "Based on the name **Viburnum ayavacense**, this refers to the genus *Viburnum* (the viburnum family) and the specific species *ayavacense*.\n\nThe scientific name *Viburnum ayavacense* is a synonym for **Viburnum xanthocarpum** (also known as *Viburnum xanthocarpum* var. *ayavacense*).\n\nThe"
+    },
+    {
+      "text": "This molecule has been reported in Scytonema mirabile with data available.",
+      "ground_truth": "CNC(=O)c1nc(oc1C)[C@]1(C)CSC(=N1)[C@]1(C)CSC(=N1)[C@@H]1CSC(=N1)[C@]1(C)CSC(=N1)C(C)C",
+      "prediction": "Based on the description provided, this molecule is **Scytonema mirabile** (also known as *Scytonema mirabile* or *Scytonema mirabilis*), a cyanobacterium.\n\nThe most prominent and widely reported structure for *Scytonema mirabile* is the **scytonema membrane** (a lipid bilayer). The specific data available in the literature typically refers to the structural details of this membrane, including the arrangement of the lipid bil"
+    },
+    {
+      "text": "This molecule has been reported in Akebia trifoliata and Syzygium sandwicense with data available.",
+      "ground_truth": "CC(=C)[C@@H]1CC[C@]2([C@H]1[C@H]1CC[C@H]3[C@@]([C@]1(C)CC2)(C)CC[C@@H]1[C@]3(C)C[C@@H](O)[C@H](C1(C)C)O)C(=O)O",
+      "prediction": "Based on the chemical name provided, this molecule is **Akebia trifoliata** (the leaves of the Akebia tree) and **Syzygium sandwicense** (the leaves of the Syzygium tree).\n\nThe specific compound is **Akebia trifoliata** (or **Syzygium sandwicense**), which is a known phytoalexin found in the leaves of these two species. It is a sesquiterpene"
+    },
+    {
+      "text": "This molecule has been reported in Penicillium citrinum and Aspergillus sclerotiorum with data available.",
+      "ground_truth": "CC[C@@H](C(=O)O[C@H]1C[C@H](O)C=C2[C@H]1[C@@H](CC[C@H](C[C@H](CC(=O)O)O)O)[C@H](C=C2)C)C",
+      "prediction": "Based on the text provided, this molecule is **Penicillin** (specifically the penicillin G derivative, penicillin G, which is the active metabolite of penicillin G).\n\nThe structure of penicillin G consists of a beta-lactam ring fused to a six-membered ring containing a carboxylic acid group and a hydroxyl group.\n\nThe corresponding SMILES string is:\n\n```text\nCC(=O)O"
+    },
+    {
+      "text": "This molecule has been reported in Sanghuangporus baumii with data available.",
+      "ground_truth": "Oc1ccc(cc1)[C@@H]1CC(=O)c2c(O1)cc(c(c2O)Cc1ccccc1O)O",
+      "prediction": "Based on the text provided, there is no specific chemical structure or name associated with the compound \"Sanghuangporus baumii\" in the context of a general chemical query. The text appears to be a citation or a reference to a specific study (likely a paper by Sanghuangporus Baumii or a similar author) rather than a description of a known molecule.\n\nHowever, if you are referring to a specific paper or dataset where this molecule is"
+    },
+    {
+      "text": "This molecule is a glycoside. It has a role as a metabolite.",
+      "ground_truth": "OC[C@H]1O[C@@H](O[C@]23OC(=O)C(=C3C[C@@H]3[C@](C2)(C)[C@@H]2C[C@@H]2C3=C)C)[C@@H]([C@H]([C@@H]1O)O)O",
+      "prediction": "To generate the correct SMILES string, I need to identify the specific chemical structure implied by the description \"glycoside\" and \"metabolite.\"\n\nIn the context of biochemistry and metabolic pathways, the most common and recognizable glycoside that functions as a metabolite is **Glycogen**. Glycogen is a polysaccharide composed of glucose units linked by glycosidic bonds. It is a primary energy storage molecule in animals and plants and"
+    },
+    {
+      "text": "This molecule is a small molecule drug with a maximum clinical trial phase of II (across all indications) and has 3 investigational indications.",
+      "ground_truth": "O=C(C1CC1)Nc1nn2c(n1)cccc2c1ccc(cc1)C(=O)N1CC(C1)(C)C",
+      "prediction": "Based on the description provided, this molecule is **Aflodex** (also known as **Aflodex** or **Aflodex**).\n\nHere is the breakdown of the details matching your description:\n*   **Structure**: It is a small molecule drug.\n*   **Clinical Phase**: It is a drug with a maximum clinical trial phase of **II** (Phase II).\n*   **Indications**: It has **3 investigational"
+    },
+    {
+      "text": "This molecule has been reported in Rhodiola rosea, Solanum lycopersicum, and other organisms with data available.",
+      "ground_truth": "OC[C@H]1O[C@@H](Oc2cc(/C=C/C(=O)O)ccc2O)[C@@H]([C@H]([C@@H]1O)O)O",
+      "prediction": "Based on the chemical structure of **Rhodiola rosea** (a well-known herbal supplement), the molecule is **Rhodiola Rosea** (also known as *Rhodiola rosea* or *Rhodiola acutifolia*).\n\nThe structure consists of a central **dihydroxyphenylalanine (DHPA)** ring, which is a common motif in many herbal compounds. Attached to the DHPA ring are two **hydrox"
+    },
+    {
+      "text": "This molecule has been reported in Orixa japonica with data available.",
+      "ground_truth": "O[C@@H]1[C@@H](O)c2c(OC1(C)C)c1ccccc1n(c2=O)C",
+      "prediction": "Based on the name \"Orixa japonica\" and the context of chemical data available in that source, the molecule described is **Orixa japonica** itself.\n\nThe chemical name for *Orixa japonica* is **2-(4-methyl-2,5-dihydro-1H-inden-1-yl)-2-methyl-2,5-dihydro-1H-inden-1-yl acetate**.\n\nHere is the corresponding SM"
+    },
+    {
+      "text": "This molecule has been reported in Goniothalamus amuyon with data available.",
+      "ground_truth": "O=C1C=CC[C@@H](O1)[C@@H]1O[C@H]1c1ccccc1",
+      "prediction": "Based on the name \"Goniothalamus amuyon,\" this refers to a specific species within the genus *Goniothalamus* found in the region of the Amazon Basin (specifically the state of Amazonas, Brazil).\n\nThe chemical structure of *Goniothalamus amuyon* is well-documented in scientific literature. It is a genus of flowering plants (Fabaceae) characterized by its large, lobed leaves and distinctive reproductive structures."
+    }
+  ]
+}
