@@ -210,7 +210,7 @@ def main():
 
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name,
-        torch_dtype=torch.bfloat16 if use_bf16 else torch.float32,
+        dtype=torch.bfloat16 if use_bf16 else torch.float32,
         trust_remote_code=True,
     )
 

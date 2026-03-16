@@ -78,9 +78,9 @@ def load_model_and_tokenizer(model_name, base_model_name=None, dtype_name="auto"
     Load model and tokenizer. If base_model_name is provided, loads the base
     model first and then applies the PEFT adapter from model_name.
     """
-    torch_dtype = resolve_torch_dtype(dtype_name)
+    model_dtype = resolve_torch_dtype(dtype_name)
     model_kwargs = {
-        "torch_dtype": torch_dtype,
+        "dtype": model_dtype,
         "trust_remote_code": True,
     }
     if torch.cuda.is_available():
