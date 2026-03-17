@@ -12,14 +12,16 @@ Usage:
         --model_name output/qwen35-oft-smiles \
         --base_model_name Qwen/Qwen3.5-0.8B \
         --test_file data/test.jsonl \
-        --output_file results/oft_results.json \
+        --output_file results/oft_results_qwen35_1k.json \
+        --max_samples 1000 \
         --max_new_tokens 256
 
     # Evaluate the base model (zero-shot baseline)
     python evaluate.py \
         --model_name Qwen/Qwen3.5-0.8B \
         --test_file data/test.jsonl \
-        --output_file results/base_results.json \
+        --output_file results/base_results_qwen35_1k.json \
+        --max_samples 1000 \
         --max_new_tokens 256
 """
 

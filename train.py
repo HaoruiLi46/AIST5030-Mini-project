@@ -6,8 +6,8 @@ Usage:
         --model_name Qwen/Qwen3.5-0.8B \
         --train_file data/train.jsonl \
         --output_dir output/qwen35-oft-smiles \
-        --num_train_epochs 3 \
-        --per_device_train_batch_size 8 \
+        --num_train_epochs 1 \
+        --per_device_train_batch_size 4 \
         --learning_rate 1e-4
 
 Key features:
@@ -162,8 +162,8 @@ def parse_args():
 
     # Training
     parser.add_argument("--output_dir", type=str, default="output/qwen35-oft-smiles")
-    parser.add_argument("--num_train_epochs", type=int, default=3)
-    parser.add_argument("--per_device_train_batch_size", type=int, default=8)
+    parser.add_argument("--num_train_epochs", type=int, default=1)
+    parser.add_argument("--per_device_train_batch_size", type=int, default=4)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4)
     parser.add_argument("--learning_rate", type=float, default=1e-4)
     parser.add_argument("--warmup_ratio", type=float, default=0.05)

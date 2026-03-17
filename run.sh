@@ -16,7 +16,9 @@ MODEL_NAME="Qwen/Qwen3.5-0.8B"
 OUTPUT_DIR="output/qwen35-oft-smiles"
 TRAIN_FILE="data/train.jsonl"
 TEST_FILE="data/test.jsonl"
-MAX_EVAL_SAMPLES=500  # Limit for quick evaluation; remove for full eval
+MAX_EVAL_SAMPLES=1000  # Match the 1,000-sample evaluation reported in report.tex
+OFT_RESULTS_FILE="results/oft_results_qwen35_1k.json"
+BASE_RESULTS_FILE="results/base_results_qwen35_1k.json"
 
 prepare_data() {
     echo "=== Step 1: Preparing data ==="
@@ -30,8 +32,8 @@ train_model() {
         --model_name ${MODEL_NAME} \
         --train_file ${TRAIN_FILE} \
         --output_dir ${OUTPUT_DIR} \
-        --num_train_epochs 3 \
-        --per_device_train_batch_size 8 \
+        --num_train_epochs 1 \
+        --per_device_train_batch_size 4 \
         --gradient_accumulation_steps 4 \
         --learning_rate 1e-4 \
         --logging_steps 50 \
@@ -47,7 +49,7 @@ eval_oft() {
         --model_name ${OUTPUT_DIR} \
         --base_model_name ${MODEL_NAME} \
         --test_file ${TEST_FILE} \
-        --output_file results/oft_results.json \
+        --output_file ${OFT_RESULTS_FILE} \
         --max_samples ${MAX_EVAL_SAMPLES}
 }
 
@@ -56,7 +58,7 @@ eval_base() {
     python3 evaluate.py \
         --model_name ${MODEL_NAME} \
         --test_file ${TEST_FILE} \
-        --output_file results/base_results.json \
+        --output_file ${BASE_RESULTS_FILE} \
         --max_samples ${MAX_EVAL_SAMPLES}
 }
 

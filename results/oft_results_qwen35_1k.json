@@ -1,5 +1,5 @@
 {
-  "model": "output/qwen35-oft-smiles-fast",
+  "model": "output/qwen35-oft-smiles",
   "num_samples": 1000,
   "validity": {
     "valid_count": 873,
